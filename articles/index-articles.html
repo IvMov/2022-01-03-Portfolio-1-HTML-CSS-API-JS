@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Here you can find all articles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&family=Nixie+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../burger-style.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="main-wrapper">
+        <header>
+            <div class="header-wrapper">
+                <div id="logo">
+                    <a href="../index-home.html"><img src="../images/logo.png" alt="Logo"></a>
+                </div>
+                <nav id="nav">
+                    <ul id="navigation-ul">
+                        <li class="navigation-li"><a class="nav-a" href="../index-home.html">Home</a></li>
+                        <li class="navigation-li"><a class="nav-a active" href="index-articles.html">Articles</a></li>
+                        <li class="navigation-li"><a class="nav-a" href="../users/users.html">Authors</a></li>
+                        <li class="navigation-li"><a class="nav-a" href="../albums/galeries.html">Galleries</a></li>
+                        <li class="navigation-li"><a class="nav-a" style="text-decoration: line-through; color: rgba(255, 255, 255, 0.3)" href="#">AboutMe</a></li>
+                        <li class="navigation-li"><a class="nav-a" style="text-decoration: line-through; color: rgba(255, 255, 255, 0.3)" href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div id="hamburger" class="hamburglar is-open">
+
+                    <div class="burger-icon">
+                      <div class="burger-container">
+                        <span class="burger-bun-top"></span>
+                        <span class="burger-filling"></span>
+                        <span class="burger-bun-bot"></span>
+                      </div>
+                    </div>
+                    
+                    <!-- svg ring containter -->
+                    <div class="burger-ring">
+                      <svg class="svg-ring">
+                        <path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+                      </svg>
+                    </div>
+                    <!-- the masked path that animates the fill to the ring -->
+                    
+                    <svg width="0" height="0">
+                       <mask id="mask">
+                    <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+                       </mask>
+                     </svg>
+                    <div class="path-burger">
+                      <div class="animate-path">
+                        <div class="path-rotation"></div>
+                      </div>
+                    </div>
+                      
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="left-bar"></div>
+
+            <div id="content-wrapper">
+                <div id="content">
+
+                    <div class="article-wrapper" id="article-1">
+
+                        <div class="article-content">
+                            <h1 class="article-header"><a class="title-anc" href="articlle-1.html">1Lorem ipsum dolor sit amet consectetur</a></h1>
+                            <p class="article-maintext">
+                                111Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis, a magni molestias reiciendis soluta ipsa, sequi vero eaque quia repellat dolorem aperiam architecto saepe magnam nisi maxime pariatur iste?
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus earum odio nemo cum voluptas aut neque. Laborum officiis dicta beatae. Labore debitis suscipit iure itaque accusantium iste vero, corporis fugit!
+                            </p>
+                        </div>
+
+                        <div class="about-article">
+                            <div class="author-wrapper"><a class=" author author-1" href="../users/user-1.html">Tom Jerry</a></div>
+                            <ul class="thems">
+                                <li class="thems-li"><a href="#">Sport</a></li>
+                                <li class="thems-li"><a href="#">Spirt</a></li>
+                                <li class="thems-li"><a href="#">Stress</a></li>
+                                <li class="thems-li"><a href="#">Health</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="comments-block-wrapper">
+                            <div class="comments-header">
+                                <p>Comments <span>0</span> </p>
+                                <div class="show-hide-comments-label">Show comments</div>
+                            </div>
+                            <div class="comments-wrapper">
+                                <div class="comment">
+                                    <div class="about-comment">
+                                        <p class="comment-author"></p>
+                                        <p class="comment-time"></p>
+                                    </div>
+                                    <div class="comment-content">
+                                        <p class="comment-text"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p></p>
+                    </div>
+
+                    <div class="article-wrapper" id="article-2">
+
+                        <div class="article-content">
+                            <h1 class="article-header"><a class="title-anc" href="articlle-2.html">2Lorem ipsum dolor sit amet consectetur</a></h1>
+                            <p class="article-maintext">
+                                222Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis, a magni molestias reiciendis soluta ipsa, sequi vero eaque quia repellat dolorem aperiam architecto saepe magnam nisi maxime pariatur iste?
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus earum odio nemo cum voluptas aut neque. Laborum officiis dicta beatae. Labore debitis suscipit iure itaque accusantium iste vero, corporis fugit!
+                            </p>
+                        </div>
+
+                        <div class="about-article">
+                            <div class="author-wrapper"><a class="author author-1" href="../users/user-1.html">Tom Jerry</a></div>
+                            <ul class="thems">
+                                <li class="thems-li"><a href="#">Sport</a></li>
+                                <li class="thems-li"><a href="#">Spirt</a></li>
+                                <li class="thems-li"><a href="#">Stress</a></li>
+                                <li class="thems-li"><a href="#">Health</a></li>
+                                <li class="thems-li"><a href="#">Sport</a></li>
+                                <li class="thems-li"><a href="#">Spirt</a></li>
+                                <li class="thems-li"><a href="#">Stress</a></li>
+                                <li class="thems-li"><a href="#">Health</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="comments-block-wrapper">
+                            <div class="comments-header">
+                                <p>Comments <span>1</span> </p>
+                                <div class="show-hide-comments-label">Show comments</div>
+                            </div>
+                            <div class="comments-wrapper">
+                                <div class="comment">
+                                    <div class="about-comment">
+                                        <p class="comment-author">Vasia pupkin</p>
+                                        <p class="comment-time">2011-11-11, 08:30 <span>10 years ago</span></p>
+                                    </div>
+                                    <div class="comment-content">
+                                        <p class="comment-text">Aspernatur unde voluptatibus ratione sunt, deserunt nulla itaque ipsum labore possimus deleniti =)))</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="article-wrapper" id="article-3">
+
+                        <div class="article-content">
+                            <h1 class="article-header"><a class="title-anc" href="articlle-3.html">3Lorem ipsum dolor sit amet consectetur</a></h1>
+                            <p class="article-maintext">
+                                333Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis, a magni molestias reiciendis soluta ipsa, sequi vero eaque quia repellat dolorem aperiam architecto saepe magnam nisi maxime pariatur iste?
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus earum odio nemo cum voluptas aut neque. Laborum officiis dicta beatae. Labore debitis suscipit iure itaque accusantium iste vero, corporis fugit!
+                            </p>
+                        </div>
+
+                        <div class="about-article">
+                           <div class="author-wrapper"> <a class="author author-1" href="../users/user-2.html">2Tom Jerry</a></div>
+                            <ul class="thems">
+                                <li class="thems-li"><a href="#">Sport</a></li>
+                                <li class="thems-li"><a href="#">Spirt</a></li>
+                                <li class="thems-li"><a href="#">Stress</a></li>
+                                <li class="thems-li"><a href="#">Health</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="comments-block-wrapper">
+                            <div class="comments-header">
+                                <p>Comments <span>2</span> </p>
+                                <div class="show-hide-comments-label">Show comments</div>
+                            </div>
+                            <div class="comments-wrapper">
+                                <div class="comment">
+                                    <div class="about-comment">
+                                        <p class="comment-author">Pupka Vaskin</p>
+                                        <p class="comment-time">2011-11-11, 08:30 <span>10 years ago</span></p>
+                                    </div>
+                                    <div class="comment-content">
+                                        <p class="comment-text">222Aspernatur unde voluptatibus ratione sunt, deserunt nulla itaque ipsum labore possimus deleniti =)))</p>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="about-comment">
+                                        <p class="comment-author">Fibi Kulkis</p>
+                                        <p class="comment-time">2011-11-11, 09:30 <span>10 years ago</span></p>
+                                    </div>
+                                    <div class="comment-content">
+                                        <p class="comment-text">333Aspernatur unde voluptatibus ratione sunt, deserunt nulla itaque ipsum labore possimus deleniti =)))</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="article-wrapper" id="article-4">
+
+                        <div class="article-content">
+                            <h1 class="article-header"><a class="title-anc" href="articlle-4.html">4Lorem ipsum dolor sit amet consectetur</a></h1>
+                            <p class="article-maintext">
+                                444Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis, a magni molestias reiciendis soluta ipsa, sequi vero eaque quia repellat dolorem aperiam architecto saepe magnam nisi maxime pariatur iste?
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus earum odio nemo cum voluptas aut neque. Laborum officiis dicta beatae. Labore debitis suscipit iure itaque accusantium iste vero, corporis fugit!
+                            </p>
+                        </div>
+
+                        <div class="about-article">
+                            <div class="author-wrapper"><a class="author author-1" href="../users/user-2.html">2Tom Jerry</a></div>
+                            <ul class="thems">
+                                <li class="thems-li"><a href="#">Sport</a></li>
+                                <li class="thems-li"><a href="#">Spirt</a></li>
+                                <li class="thems-li"><a href="#">Stress</a></li>
+                                <li class="thems-li"><a href="#">Health</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="comments-block-wrapper">
+                            <div class="comments-header">
+                                <p>Comments <span>3</span> </p>
+                                <div class="show-hide-comments-label">Show comments</div>
+                            </div>
+                            <div class="comments-wrapper">
+                                <div class="comment">
+                                    <div class="about-comment">
+                                        <p class="comment-author">Pupa Kulkis</p>
+                                        <p class="comment-time">2011-11-11, 08:30 <span>10 years ago</span></p>
+                                    </div>
+                                    <div class="comment-content">
+                                        <p class="comment-text">133Aspernatur unde voluptatibus ratione sunt, deserunt nulla itaque ipsum labore possimus deleniti =)))</p>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="about-comment">
+                                        <p class="comment-author">Pupa Kulkis</p>
+                                        <p class="comment-time">2011-11-11, 09:30 <span>10 years ago</span></p>
+                                    </div>
+                                    <div class="comment-content">
+                                        <p class="comment-text">233Aspernatur unde voluptatibus ratione sunt, deserunt nulla itaque ipsum labore possimus deleniti =)))</p>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="about-comment">
+                                        <p class="comment-author">Pupa Kulkis</p>
+                                        <p class="comment-time">2011-11-11, 10:30 <span>10 years ago</span></p>
+                                    </div>
+                                    <div class="comment-content">
+                                        <p class="comment-text">333Aspernatur unde voluptatibus ratione sunt, deserunt nulla itaque ipsum labore possimus deleniti =)))</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="article-wrapper" id="article-5">
+
+                        <div class="article-content">
+                            <h1 class="article-header"><a class="title-anc" href="articlle-5.html">5Lorem ipsum dolor sit amet consectetur</a></h1>
+                            <p class="article-maintext">
+                                555Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis, a magni molestias reiciendis soluta ipsa, sequi vero eaque quia repellat dolorem aperiam architecto saepe magnam nisi maxime pariatur iste?
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus earum odio nemo cum voluptas aut neque. Laborum officiis dicta beatae. Labore debitis suscipit iure itaque accusantium iste vero, corporis fugit!
+                            </p>
+                        </div>
+
+                        <div class="about-article">
+                            <div class="author-wrapper"><a class="author author-1" href="../users/user-1.html">Tom Jerry</a></div>
+                            <ul class="thems">
+                                <li class="thems-li"><a href="#">Sport</a></li>
+                                <li class="thems-li"><a href="#">Spirt</a></li>
+                                <li class="thems-li"><a href="#">Stress</a></li>
+                                <li class="thems-li"><a href="#">Health</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="comments-block-wrapper">
+                            <div class="comments-header">
+                                <p>Comments <span>4</span> </p>
+                                <div class="show-hide-comments-label">Show comments</div>
+                            </div>
+                            <div class="comments-wrapper">
+                                <div class="comment">
+                                    <div class="about-comment">
+                                        <p class="comment-author">Pupa Kulkis</p>
+                                        <p class="comment-time">2011-11-11, 08:30 <span>10 years ago</span></p>
+                                    </div>
+                                    <div class="comment-content">
+                                        <p class="comment-text">111Aspernatur unde voluptatibus ratione sunt, deserunt nulla itaque ipsum labore possimus deleniti =))</p>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="about-comment">
+                                        <p class="comment-author">Pupa Kulkis</p>
+                                        <p class="comment-time">2011-11-11, 08:30 <span>10 years ago</span></p>
+                                    </div>
+                                    <div class="comment-content">
+                                        <p class="comment-text">133Aspernatur unde voluptatibus ratione sunt, deserunt nulla itaque ipsum labore possimus deleniti =)))</p>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="about-comment">
+                                        <p class="comment-author">Pupa Kulkis</p>
+                                        <p class="comment-time">2011-11-11, 09:30 <span>10 years ago</span></p>
+                                    </div>
+                                    <div class="comment-content">
+                                        <p class="comment-text">233Aspernatur unde voluptatibus ratione sunt, deserunt nulla itaque ipsum labore possimus deleniti =)))</p>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="about-comment">
+                                        <p class="comment-author">Pupa Kulkis</p>
+                                        <p class="comment-time">2011-11-11, 10:30 <span>10 years ago</span></p>
+                                    </div>
+                                    <div class="comment-content">
+                                        <p class="comment-text">333Aspernatur unde voluptatibus ratione sunt, deserunt nulla itaque ipsum labore possimus deleniti =)))</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="right-bar">
+                <div class="right-bar-container">
+                    
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <button onclick="topFunction()" id="backToTopBtn">&#8683;</button>
+    <script src="../index-home-script.js"></script>
+</body>
+</html>

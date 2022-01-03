@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album-3 Author - 2Tom 2Jerry</title>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,600;0,700;1,600&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+    
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="../burger-style.css">
+    <link rel="stylesheet" href="album-style.css">
+</head>
+<body>
+    <div id="main-wrapper">
+
+        <header>
+            <div class="header-wrapper">
+                <div id="logo">
+                    <a href="../index-home.html"><img src="../images/logo.png" alt="Logo"></a>
+                </div>
+                <nav id="nav">
+                    <ul id="navigation-ul">
+                        <li class="navigation-li"><a class="nav-a" href="../index-home.html">Home</a></li>
+                        <li class="navigation-li"><a class="nav-a" href="../articles/index-articles.html">Articles</a></li>
+                        <li class="navigation-li"><a class="nav-a" href="../users/users.html">Authors</a></li>
+                        <li class="navigation-li"><a class="nav-a" href="galeries.html">Galleries</a></li>
+                        <li class="navigation-li"><a class="nav-a" style="text-decoration: line-through; color: rgba(255, 255, 255, 0.3)" href="#">AboutMe</a></li>
+                        <li class="navigation-li"><a class="nav-a" style="text-decoration: line-through; color: rgba(255, 255, 255, 0.3)" href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div id="hamburger" class="hamburglar is-open">
+
+                    <div class="burger-icon">
+                      <div class="burger-container">
+                        <span class="burger-bun-top"></span>
+                        <span class="burger-filling"></span>
+                        <span class="burger-bun-bot"></span>
+                      </div>
+                    </div>
+                    
+                    <!-- svg ring containter -->
+                    <div class="burger-ring">
+                      <svg class="svg-ring">
+                        <path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+                      </svg>
+                    </div>
+                    <!-- the masked path that animates the fill to the ring -->
+                    
+                    <svg width="0" height="0">
+                       <mask id="mask">
+                    <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+                       </mask>
+                     </svg>
+                    <div class="path-burger">
+                      <div class="animate-path">
+                        <div class="path-rotation"></div>
+                      </div>
+                    </div>
+                      
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="about-galery">
+                <h1><a href="../users/user-2.html">2Tom 2Jerry</a> gallery</h1>
+            </div>
+            <div class="gallery">
+
+                <ul class="controls">
+                    <li class="buttons active" data-filter="all">all</li>
+                    <li class="buttons" data-filter="city">city</li>
+                    <li class="buttons" data-filter="food">food</li>
+                    <li class="buttons" data-filter="forest">forest</li>
+                    <li class="buttons" data-filter="beach">beach</li>
+                    <li class="buttons" data-filter="fibi">my dog</li>
+                </ul>
+            
+                <div class="image-container">
+            
+                    <a href="album-3/A3-city-1.jpg" class="image city">
+                        <img src="album-3/A3-city-1.jpg" alt="">
+                    </a>
+                    <a href="album-3/A3-city-2.jpg" class="image city">
+                        <img src="album-3/A3-city-2.jpg" alt="">
+                    </a>
+                    <a href="album-3/A3-city-3.jpg" class="image city">
+                        <img src="album-3/A3-city-3.jpg" alt="">
+                    </a>
+            
+                    <a href="album-1/A1-food-4.jpg" class="image food">
+                        <img src="album-1/A1-food-4.jpg" alt="">
+                    </a>
+                    <a href="album-1/A1-food-5.jpg" class="image food">
+                        <img src="album-1/A1-food-5.jpg" alt="">
+                    </a>
+            
+                    <a href="album-1/A1-forest-6.jpg" class="image forest">
+                        <img src="album-1/A1-forest-6.jpg" alt="">
+                    </a>
+                    <a href="album-1/A1-forest-7.jpg" class="image forest">
+                        <img src="album-1/A1-forest-7.jpg" alt="">
+                    </a>
+                    <a href="album-1/A1-beach-8.jpg" class="image beach">
+                        <img src="album-1/A1-beach-8.jpg" alt="">
+                    </a>
+                    <a href="album-1/A1-beach-9.jpg" class="image beach">
+                        <img src="album-1/A1-beach-9.jpg" alt="">
+                    </a>
+                    <a href="album-1/A1-fibi-10.jpg" class="image fibi">
+                        <img src="album-1/A1-fibi-10.jpg" alt="">
+                    </a>
+            
+                    <a href="album-1/A1-fibi-11.jpg" class="image fibi">
+                        <img src="album-1/A1-fibi-11.jpg" alt="">
+                    </a>
+                    <a href="album-1/A1-fibi-12.jpg" class="image fibi">
+                        <img src="album-1/A1-fibi-12.jpg" alt="">
+                    </a>
+                    <a href="album-1/A1-fibi-13.jpg" class="image fibi">
+                        <img src="album-1/A1-fibi-13.jpg" alt="">
+                    </a>
+            
+                </div>
+            
+            </div>
+
+            <div id="right-bar">
+                
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <button onclick="topFunction()" id="backToTopBtn">&#8683;</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="album-script.js"></script>
+    <script>
+        $(document).ready(function(){
+
+$('.buttons').click(function(){
+
+    $(this).addClass('active').siblings().removeClass('active');
+
+    var filter = $(this).attr('data-filter')
+
+    if(filter == 'all'){
+        $('.image').show(400);
+    }else{
+        $('.image').not('.'+filter).hide(200);
+        $('.image').filter('.'+filter).show(400);
+    }
+
+});
+
+$('.gallery').magnificPopup({
+
+    delegate:'a',
+    type:'image',
+    gallery:{
+    enabled:true
+    }
+
+});
+
+});
+    </script>
+</body>
+</html>

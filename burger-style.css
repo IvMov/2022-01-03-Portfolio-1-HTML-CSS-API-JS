@@ -1,0 +1,503 @@
+html {
+    scroll-behavior: smooth;
+}
+:root{
+        --color: rgba(28,137,255, 0.6);  
+        --main-1: rgb(127, 233, 110) ;    
+        --animation: 0.4s; 
+        --scale: 1;   
+        --black-2:rgba(21, 21, 21, 0.5);
+        --font-1: font-family: 'Exo', sans-serif;
+        --font-2: font-family: font-family: 'Sorts Mill Goudy', serif;;
+}
+
+/* header and logo for mobile */
+header {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#logo {
+    height: 68px;
+}
+#logo a {
+  width:100px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#logo img{
+    height: 100%;
+}
+
+
+nav {
+    display:none;
+}
+
+.show-menu {
+    display: block;
+    position: fixed;
+    width: 90%;
+    border-radius:.5rem;
+    background-color:rgba(21, 21, 21, 0.9);
+    padding: 100px 0px;
+    z-index: 5;
+}
+
+nav.show-menu #navigation-ul{
+    display: grid;
+    height: 160px;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    
+}
+nav.show-menu .navigation-li {
+    padding: 2px;
+    border-bottom: 1px solid var(--color);
+    border-left: 1px solid var(--color);
+    border-radius: 5px;
+}
+nav.show-menu .navigation-li a{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: var(--font-1);
+}
+nav.show-menu .navigation-li a:hover {
+  transform: scale(1.05);
+  
+}
+    nav.show-menu .navigation-li:nth-child(1) {
+        grid-column: 1 / span 4;
+        grid-row: 2 / span 3;
+    }
+    nav.show-menu .navigation-li:nth-child(2) {
+        grid-column: 5 / span 4;
+        grid-row: 1 / span 2;
+    }
+    nav.show-menu .navigation-li:nth-child(3) {
+        grid-column: 9 / span 4;
+        grid-row: 2 / span 3;
+    }
+    nav.show-menu .navigation-li:nth-child(4) {
+        grid-column: 5 / span 4;
+        grid-row: 4 / span 2;
+    }
+    nav.show-menu .navigation-li:nth-child(5) {
+        grid-column: 3 / span 4;
+        grid-row: 7 / span 1;
+    }
+    nav.show-menu .navigation-li:nth-child(6) {
+        grid-column: 8 / span 4;
+        grid-row: 7 / span 1;
+    }
+
+/* BURGER STARTS  */
+
+*:before, *:after {
+    box-sizing: border-box;
+   }
+  #hamburger {
+      position: fixed;
+      z-index: 2;
+      top: 1px;
+      right: 10px;
+  }
+  .hamburglar {
+    transform: scale(var(--scale));
+    width: 68px;
+    height: 68px;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+  
+  .path-burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 68px;
+    width: 68px;
+    mask: url(#mask);
+    -webkit-mask-box-image: url(https://raygun.io/upload/mask.svg);
+  }
+  
+  .animate-path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 68px;
+    height: 68px;
+  }
+  
+  .path-rotation {
+    height: 34px;
+    width: 34px;
+    margin: 34px 34px 0 0;
+    transform: rotate(0deg);
+    transform-origin: 100% 0;
+  }
+  .path-rotation:before {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 34px;
+      margin: 0 4px 0 0;
+      background: var(--color);
+    }
+  
+  
+  @keyframes rotate-out {
+    0% {
+      transform: rotate(0deg);
+    }
+    40% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotate-in {
+    0% {
+      transform: rotate(360deg);
+    }
+    40% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+      .hamburglar.is-open .path {
+          animation: dash-in var(--animation) linear normal;
+          animation-fill-mode:forwards;
+      }
+  
+      .hamburglar.is-open .animate-path {
+          animation: rotate-in var(--animation) linear normal;
+          animation-fill-mode:forwards;
+      }
+  
+      .hamburglar.is-closed .path {
+          animation: dash-out var(--animation) linear normal;
+          animation-fill-mode:forwards;
+       }
+      .hamburglar.is-closed .animate-path {
+          animation: rotate-out var(--animation) linear normal;
+          animation-fill-mode:forwards;
+      }
+  
+  
+  .path {
+    stroke-dasharray: 240;
+    stroke-dashoffset: 240;
+    stroke-linejoin: round;
+  }
+  
+  @keyframes dash-in {
+    0% {
+      stroke-dashoffset: 240;
+    }
+    40% {
+      stroke-dashoffset: 240;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes dash-out {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    40% {
+      stroke-dashoffset: 240;
+    }
+    100% {
+      stroke-dashoffset: 240;
+    }
+  }
+  
+  .burger-icon {
+    position: absolute;
+    padding: 20px 16px;
+    height: 68px;
+    width: 68px;
+  }
+  
+  .burger-container {
+    position: relative;
+    height: 28px;
+    width: 36px;
+  }
+  
+  .burger-bun-top,
+  .burger-bun-bot,
+  .burger-filling {
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 36px;
+    border-radius: 2px;
+    background: var(--color);
+  }
+  
+  .burger-bun-top {
+    top: 0;
+    transform-origin: 34px 2px;
+  }
+  
+  .burger-bun-bot {
+    bottom: 0;
+    transform-origin: 34px 2px;
+  }
+  
+  .burger-filling {
+    top: 12px;
+  }
+  
+  
+  .burger-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 68px;
+    height: 68px;
+  }
+  
+  .svg-ring {
+    width: 68px;
+    height: 68px;
+  }
+  
+      .hamburglar.is-open .burger-bun-top {
+          animation: bun-top-out var(--animation) linear normal;
+          animation-fill-mode:forwards;
+      }
+  
+      .hamburglar.is-open .burger-bun-bot {
+          animation: bun-bot-out var(--animation) linear normal;
+          animation-fill-mode:forwards;
+      }
+  
+   
+      .hamburglar.is-closed .burger-bun-top {
+          animation: bun-top-in var(--animation) linear normal;
+          animation-fill-mode:forwards;
+      }
+      .hamburglar.is-closed .burger-bun-bot {
+          animation: bun-bot-in var(--animation) linear normal;
+          animation-fill-mode:forwards;
+      }
+  
+  
+  @keyframes bun-top-out {
+    0% {
+      left: 0;
+      top: 0;
+      transform: rotate(0deg);
+    }
+    20% {
+      left: 0;
+      top: 0;
+      transform: rotate(15deg);
+    }
+    80% {
+      left: -5px;
+      top: 0;
+      transform: rotate(-60deg);
+    }
+    100% {
+      left: -5px;
+      top: 1px;
+      transform: rotate(-45deg);
+    }
+  }
+  
+  @keyframes bun-bot-out {
+    0% {
+      left: 0;
+      transform: rotate(0deg);
+    }
+    20% {
+      left: 0;
+      transform: rotate(-15deg);
+    }
+    80% {
+      left: -5px;
+      transform: rotate(60deg);
+    }
+    100% {
+      left: -5px;
+      transform: rotate(45deg);
+    }
+  }
+  
+  
+  @keyframes bun-top-in {
+    0% {
+      left: -5px;
+      bot: 0;
+      transform: rotate(-45deg);
+    }
+    20% {
+      left: -5px;
+      bot: 0;
+      transform: rotate(-60deg);
+    }
+    80% {
+      left: 0;
+      bot: 0;
+      transform: rotate(15deg);
+    }
+    100% {
+      left: 0;
+      bot: 1px;
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes bun-bot-in {
+    0% {
+      left: -5px;
+      transform: rotate(45deg);
+    }
+    20% {
+      left: -5px;
+      bot: 0;
+      transform: rotate(60deg);
+    }
+    80% {
+      left: 0;
+      bot: 0;
+      transform: rotate(-15deg);
+    }
+    100% {
+      left: 0;
+      transform: rotate(0deg);
+    }
+  }
+  
+  
+  .hamburglar.is-open .burger-filling {
+      animation: burger-fill-out var(--animation) linear normal;
+      animation-fill-mode:forwards;
+  }
+  
+  .hamburglar.is-closed .burger-filling {
+      animation: burger-fill-in var(--animation) linear normal;
+      animation-fill-mode:forwards;
+    }
+  
+  @keyframes burger-fill-in {
+    0% {
+      width: 0;
+      left: 36px;
+    }
+    40% {
+      width: 0;
+      left: 40px;
+    }
+    80% {
+      width: 36px;
+      left: -6px;
+    }
+    100% {
+      width: 36px;
+      left: 0px;
+    }
+  }
+  
+  @keyframes burger-fill-out {
+    0% {
+      width: 36px;
+      left: 0px;
+    }
+    20% {
+      width: 42px;
+      left: -6px;
+    }
+  
+    40% {
+      width: 0;
+      left: 40px;
+    }
+  
+    100% {
+      width: 0;
+      left: 36px;
+    }
+  }
+  /* BURGER ENDS */
+
+  
+#backToTopBtn {
+    display: none; 
+    position: fixed;
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 55; 
+    border: none;
+    outline: none; 
+    background-color: rgba(23, 209, 138, 0.2); 
+    color: white; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 2rem; 
+  }
+  
+  #backToTopBtn:hover {
+    background-color: var(--color); 
+  }
+  @media screen and (min-width: 1024px) {
+       /* navigation for desktop */
+       nav {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+      header{
+        position: fixed;
+        top:0;
+        left:50%;
+        transform: translateX(-50%);
+        height: fit-content;
+          width: 1360px;
+          margin: 0 auto;
+          z-index: 5;
+          background-color:rgba(5, 5, 4, 0.8);
+          border-radius: 0px 0px 30px 30px;
+          border-left: 3px solid var(--main-border);
+          border-right: 3px solid var(--main-border);
+          border-bottom: 1px solid var(--main-border);
+      }
+      .nav-a {
+        padding: 0.7rem 0.9rem;
+        margin: 0 5px;
+        font-weight: 700;
+        border-radius:.5rem;
+      }
+      .nav-a:hover, .nav-a.active{
+        color: var(--main-border);
+      
+      }
+      #navigation-ul{
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .navigation-li{
+        margin: 0px 5px;
+      }
+      .header-wrapper{
+        display: flex;
+        justify-content: space-evenly;
+      }
+      
+  }
