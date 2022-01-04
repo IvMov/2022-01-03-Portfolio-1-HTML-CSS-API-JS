@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Read about everething here</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,600;0,700;1,600&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="burger-style.css">
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="main-wrapper">
+        <header>
+            <div class="header-wrapper">
+                <div id="logo">
+                    <a href="index-home.html"><img src="images/logo.png" alt="Logo"></a>
+                </div>
+                <nav id="nav">
+                    <ul id="navigation-ul">
+                        <li class="navigation-li"><a class="nav-a" href="index-home.html">Home</a></li>
+                        <li class="navigation-li"><a class="nav-a" href="articles.html">Articles</a></li>
+                        <li class="navigation-li"><a class="nav-a" href="users.html">Authors</a></li>
+                        <li class="navigation-li"><a class="nav-a" href="galeries.html">Galleries</a></li>
+                        <li class="navigation-li"><a class="nav-a" style="text-decoration: line-through; color: rgba(255, 255, 255, 0.3)" href="#">AboutMe</a></li>
+                        <li class="navigation-li"><a class="nav-a" style="text-decoration: line-through; color: rgba(255, 255, 255, 0.3)" href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div id="hamburger" class="hamburglar is-open">
+
+                    <div class="burger-icon">
+                      <div class="burger-container">
+                        <span class="burger-bun-top"></span>
+                        <span class="burger-filling"></span>
+                        <span class="burger-bun-bot"></span>
+                      </div>
+                    </div>
+                    
+                    <!-- svg ring containter -->
+                    <div class="burger-ring">
+                      <svg class="svg-ring">
+                        <path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+                      </svg>
+                    </div>
+                    <!-- the masked path that animates the fill to the ring -->
+                    
+                    <svg width="0" height="0">
+                       <mask id="mask">
+                    <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+                       </mask>
+                     </svg>
+                    <div class="path-burger">
+                      <div class="animate-path">
+                        <div class="path-rotation"></div>
+                      </div>
+                    </div>
+                      
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="left-bar">
+                <div class="radio">
+                    <iframe width="100%" allow='autoplay' src="https://www.youtube.com/embed/36YnV9STBqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="my-music">
+                    <div id="play"></div>
+                    <audio id="mySong" >
+                        <source src="music/viktor-tsoi-1.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+
+            <div id="content-wrapper">
+                <div id="content">
+
+                </div>
+            </div>
+
+            <div id="right-bar">
+                <div class="right-bar-container">
+                   
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <button onclick="topFunction()" id="backToTopBtn">&#8683;</button>
+    <script src="article.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
