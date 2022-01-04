@@ -55,7 +55,7 @@ const wrapperForArticles = document.getElementById('content'); //const for Fetch
 fetch('https://jsonplaceholder.typicode.com/posts')
   .then(response => response.json())
   .then((posts) => {
-    for(let i = 0; i<startPageArray.length; i++) {
+    posts.map((post) => {
       let articleWrapper = document.createElement("div");
         articleWrapper.classList.add("article-wrapper");
 
@@ -67,12 +67,12 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 
             let articleHeaderA = document.createElement('a');
                 articleHeaderA.classList.add("title-anc");
-                articleHeaderA.setAttribute("href", "article.html?post_id=" + posts[startPageArray[i]].id); //ALL MAGIC with send info about page ID
-                articleHeaderA.textContent = capitalizeFirstLetter(posts[startPageArray[i]].title);
+                articleHeaderA.setAttribute("href", "article.html?post_id=" + post.id); //ALL MAGIC with send info about page ID
+                articleHeaderA.textContent = capitalizeFirstLetter(post.title);
 
           let articleMaintext = document.createElement('p');
               articleMaintext.classList.add("article-maintext");
-              articleMaintext.textContent = capitalizeFirstLetter(posts[startPageArray[i]].body+posts[startPageArray[i]].body+posts[startPageArray[i]].body+posts[startPageArray[i]].body+posts[startPageArray[i]].body);  
+              articleMaintext.textContent = capitalizeFirstLetter(post.body+post.body+post.body+post.body+post.body);  
 
         let aboutArticle = document.createElement("div");
             aboutArticle.classList.add("about-article");
@@ -81,11 +81,11 @@ fetch('https://jsonplaceholder.typicode.com/posts')
               authorWrapper.classList.add("author-wrapper");
 
             let authorA = document.createElement('a');
-                authorA.classList.add("author-" + posts[startPageArray[i]].userId);
+                authorA.classList.add("author-" + post.userId);
                 authorA.classList.add("author");
-                authorA.setAttribute("href", "user.html?user_id=" + posts[startPageArray[i]].userId);
+                authorA.setAttribute("href", "user.html?user_id=" + post.userId);
 
-        fetch('https://jsonplaceholder.typicode.com/users?id='+ posts[startPageArray[i]].userId)
+        fetch('https://jsonplaceholder.typicode.com/users?id='+ post.userId)
           .then(response => response.json())
           .then((userInfo) => {
             authorA.textContent = userInfo[0].name;
@@ -110,7 +110,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
               commentsWrapper.classList.add("comments-wrapper");
 
                 
-          fetch('https://jsonplaceholder.typicode.com/posts/'+ posts[startPageArray[i]].id +'/comments')
+          fetch('https://jsonplaceholder.typicode.com/posts/'+ post.id +'/comments')
           .then(response => response.json())
           .then((comments) => {
             let nComments = randomCommentNumber();
@@ -162,58 +162,6 @@ fetch('https://jsonplaceholder.typicode.com/posts')
           commentsHeader.append(showHideCommentsLabel);
           commentsBlockWrapper.append(commentsWrapper);
               
-    }
+    })
     addEventListenersForHideComments();  
   })
-  
-      
-    
-// -------------------FETCH for galeries
-  const wrapperForGalleries = document.getElementsByClassName("galeries-bar-container")[0];
-
-fetch('https://jsonplaceholder.typicode.com/albums')
-  .then(response => response.json())
-  .then(albums => {
-    for(let i = 0; i<startPageArray.length; i++) {
-
-        let galery = document.createElement('div');
-          galery.classList.add("galery");
-
-          let galeryNameH4 = document.createElement('h4');
-
-
-          let galeryNameA = document.createElement('a');
-              galeryNameA.classList.add("galeryName");
-              galeryNameA.setAttribute("href", "galery.html?id="+ albums[startPageArray[i]].id);
-              galeryNameA.textContent = albums[startPageArray[i]].title;
-
-          let galeryP = document.createElement('p');
-              galeryP.textContent = "Author: ";
-
-              let galeryAuthorNameA = document.createElement('a');
-              galeryAuthorNameA.classList.add("authorName");
-              galeryAuthorNameA.setAttribute("href", "user.html?user_id="+ albums[startPageArray[i]].userId);
-
-              fetch('https://jsonplaceholder.typicode.com/users?id='+ albums[startPageArray[i]].userId)
-                    .then(response => response.json())
-                    .then(userName => {
-                      galeryAuthorNameA.textContent = userName[0].name;
-                    });
-
-              let ainside = document.createElement("a");
-                  ainside.classList.add("ainside");
-                  ainside.setAttribute("href", "href", "galery.html?id="+ albums[startPageArray[i]].id);
-
-                  let ainsideImg = document.createElement("img");
-                      ainsideImg.setAttribute('src', "https://picsum.photos/300/300?random="+ albums[startPageArray[i]].userId);
-
-
-      wrapperForGalleries.append(galery);
-          galery.append(galeryNameH4);
-              galeryNameH4.append(galeryNameA);
-          galery.append(galeryP);
-            galeryP.append(galeryAuthorNameA);
-          galery.append(ainside);
-            ainside.append(ainsideImg);
-      }
-    })
