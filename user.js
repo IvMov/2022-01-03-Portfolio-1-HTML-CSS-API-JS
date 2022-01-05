@@ -56,7 +56,7 @@ function capitalizeFirstLetter(string) {
                     let contactValuesLiEmail = document.createElement('li');
                         contactValuesLiEmail.textContent = user.email;
                     let contactValuesLiAdress = document.createElement('li');
-                        contactValuesLiAdress.textContent = `${user.address.street}, ${user.address.suite}, ${user.address.city}`;
+                        contactValuesLiAdress.textContent = `${user.address.street}, ${user.address.city}`;
                     let contactValuesLiGeolocation = document.createElement('li');
                         contactValuesLiGeolocation.textContent = `lat:${user.address.geo.lat}, lng:${user.address.geo.lng}`;
 
