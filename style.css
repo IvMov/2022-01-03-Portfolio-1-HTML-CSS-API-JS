@@ -161,6 +161,10 @@ div.about-article {
       
   }
 
+  .forLabel {
+    display: none;
+  }
+
 
   div.comments-block-wrapper {
       margin:.5rem;
@@ -394,6 +398,10 @@ div.right-bar-header h2, div.galeries-bar-header h2{
   
   #hamburger{
       display: none;
+  }
+
+  .forLabel{
+    display: block;
   }
   
 

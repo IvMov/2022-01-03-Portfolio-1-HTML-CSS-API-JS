@@ -34,7 +34,7 @@ fetch('https://jsonplaceholder.typicode.com/albums')
                   ainside.setAttribute("href", "galery.html?albumId="+ album.id);
 
                   let ainsideImg = document.createElement("img");
-                      ainsideImg.setAttribute('src', "https://picsum.photos/370/170?random="+ album.userId)
+                      ainsideImg.setAttribute('src', "https://picsum.photos/370/170?random="+ album.id)
 
 
       wrappForGalleries.append(galery);

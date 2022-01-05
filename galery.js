@@ -1,6 +1,6 @@
 const wrappMain = document.querySelector('main');
 
-const arrayOfFilters = ["all", "red","blue","green","yellow","green", "black"];
+const arrayOfFilters = ["all", "filter1","filter2","filter3","filter5", "filter6", "whereIsFilter4"];
 
 
 function randomCommentNumber(x) {
@@ -78,11 +78,13 @@ fetch('https://jsonplaceholder.typicode.com/photos?albumId='+ albumId)
     images.map((image) => {
         let imageA = document.createElement("a");
             imageA.classList.add("image");
+            // imageA.setAttribute("href", "https://picsum.photos/1000/1000?random="+ image.id); // FOR random images
             imageA.setAttribute("href", image.url);
             imageA.classList.add(arrayOfFilters[randomCommentNumber(arrayOfFilters.length)]);
 
             let imageImg = document.createElement("img");
-                imageImg.setAttribute('src', image.thumbnailUrl)
+                // imageImg.setAttribute('src', "https://picsum.photos/200/200?random="+ image.id); //FOR random images
+                imageImg.setAttribute('src', image.thumbnailUrl);
                 
                 wrapForImages.append(imageA);
                 imageA.append(imageImg);

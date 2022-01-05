@@ -30,7 +30,16 @@
                         <li class="navigation-li"><a class="nav-a" href="galeries.html">Galleries</a></li>
                         <li class="navigation-li"><a class="nav-a" style="text-decoration: line-through; color: rgba(255, 255, 255, 0.3)" href="#">AboutMe</a></li>
                         <li class="navigation-li"><a class="nav-a" style="text-decoration: line-through; color: rgba(255, 255, 255, 0.3)" href="#">Contacts</a></li>
-                        <li class="navigation-li"><input id="articlesOnPage" value="10" type="text"></li>
+                        <li class="navigation-li forLabel">
+                            <label>Choose number of articles:
+                                <select id="articleNum" name="articleNum">
+                                  <option value="5">5 articles</option>
+                                  <option value="10">10 articles</option>
+                                  <option value="20">20 articles</option>
+                                  <option value="50">50 articles</option>
+                                </select>
+                              </label>
+                        </li>
                     </ul>
                 </nav>
                 <div id="hamburger" class="hamburglar is-open">
@@ -98,6 +107,6 @@
     <button onclick="topFunction()" id="backToTopBtn">&#8683;</button>
     <script src="index-home-script.js"></script>
     <script src="script.js"></script>
-    <script src="galeries.js"></script>
+    <!-- <script src="galeries.js"></script> -->
 </body>
 </html>
