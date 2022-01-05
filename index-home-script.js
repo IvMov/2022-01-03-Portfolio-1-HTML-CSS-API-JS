@@ -10,7 +10,7 @@ function addEventListenersForHideComments () {
         //добавить/снять класс скрывающий комменты
             el.querySelector('.comments-wrapper').classList.toggle('show-hide-comments');
 
-                //добавить/снять надпись show/hide comments
+                // добавить/снять надпись show/hide comments
                 if(el.querySelector('.show-hide-comments-label').textContent == 'Show comments'){
                     el.querySelector('.show-hide-comments-label').textContent = 'Hide comments';
                 } else {
@@ -28,17 +28,18 @@ function addEventListenersForHideComments () {
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
-
+//function for random number of comments
 function randomCommentNumber() {
   return Math.floor((Math.random()*6));
 }
+
 //create random array 1-100
-function randomArray(arrayLength) {
+function randomArray(arrayLength, randMax) {
 
   let randArray = [];
   let iLoop = 0;
   do {
-    let randomNum = Math.floor((Math.random()*100))+1;
+    let randomNum = Math.floor((Math.random()*randMax))+1;
     if (!randArray.includes(randomNum)){
       randArray.push(randomNum);
       iLoop++;
@@ -46,15 +47,16 @@ function randomArray(arrayLength) {
   } while (iLoop<arrayLength);
   return randArray;
 }
+const wrapperForArticles = document.getElementById('content'); //const for Fetch output articles
+const wrapperForGalleries = document.getElementsByClassName("galeries-bar-container")[0]; //const for Fetch output galeries
 
-let startPageArray=randomArray(10); //IMPORTANT _ NUMBER of articles on page!
 
-const wrapperForArticles = document.getElementById('content'); //const for Fetch output
-//----------------------------------------------------------------------------FETCH JSON BLA BLA BLA--------------------------------------------------------------
+//----------------------------------------------------------------------------FETCH JSON Articles--------------------------------------------------------------
 
 fetch('https://jsonplaceholder.typicode.com/posts')
   .then(response => response.json())
   .then((posts) => {
+    let startPageArray=randomArray(10, posts.length); //IMPORTANT _ NUMBER of articles on page!
     for(let i = 0; i<startPageArray.length; i++) {
       let articleWrapper = document.createElement("div");
         articleWrapper.classList.add("article-wrapper");
@@ -105,47 +107,53 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             let showHideCommentsLabel = document.createElement("div");
                 showHideCommentsLabel.classList.add("show-hide-comments-label");
                 showHideCommentsLabel.textContent = "Show comments";
-              
+              //SHOW comments 
+                showHideCommentsLabel.addEventListener('click', ()=> {
+                  fetch('https://jsonplaceholder.typicode.com/posts/'+ posts[startPageArray[i]].id +'/comments')
+                      .then(response => response.json())
+                      .then((comments) => {
+                          let nComments = randomCommentNumber();
+                          showHideCommentsLabel.style.display='none';
+                              commentsHeaderPSpan.textContent = nComments;
+
+                          for(let j =0; j<nComments; j++){
+
+                            let comment = document.createElement("div");
+                                comment.classList.add("comment");
+                                
+                            let aboutComment = document.createElement("div");
+                                aboutComment.classList.add("about-comment");
+                            
+                              let commentAuthor = document.createElement("p");
+                                  commentAuthor.classList.add("comment-author");
+                                  commentAuthor.textContent = capitalizeFirstLetter(comments[j].name);
+                                  
+                              let commentTime = document.createElement("p");
+                                  commentTime.classList.add("comment-time");
+                                  commentTime.textContent = comments[j].email;
+
+                            let commentContent = document.createElement("div");
+                                commentContent.classList.add("comment-content");
+
+                              let commentText = document.createElement("p");
+                                  commentText.classList.add("comment-text");
+                                  commentText.textContent = comments[j].body;
+
+                            commentsWrapper.append(comment);
+                            comment.append(aboutComment);
+                              aboutComment.append(commentAuthor, commentTime);
+                            comment.append(commentContent);
+                            commentContent.append(commentText);
+                          }
+                        })
+                })
+
           let commentsWrapper = document.createElement("div");
               commentsWrapper.classList.add("comments-wrapper");
 
-                
-          fetch('https://jsonplaceholder.typicode.com/posts/'+ posts[startPageArray[i]].id +'/comments')
-          .then(response => response.json())
-          .then((comments) => {
-            let nComments = randomCommentNumber();
-                commentsHeaderPSpan.textContent = nComments;
 
-            for(let i =0; i<nComments; i++){
-
-              let comment = document.createElement("div");
-                  comment.classList.add("comment");
-                  
-              let aboutComment = document.createElement("div");
-                  aboutComment.classList.add("about-comment");
-              
-                let commentAuthor = document.createElement("p");
-                    commentAuthor.classList.add("comment-author");
-                    commentAuthor.textContent = capitalizeFirstLetter(comments[i].name);
-                    
-                let commentTime = document.createElement("p");
-                    commentTime.classList.add("comment-time");
-                    commentTime.textContent = comments[i].email;
-
-              let commentContent = document.createElement("div");
-                  commentContent.classList.add("comment-content");
-
-                let commentText = document.createElement("p");
-                    commentText.classList.add("comment-text");
-                    commentText.textContent = comments[i].body;
-
-              commentsWrapper.append(comment);
-              comment.append(aboutComment);
-                aboutComment.append(commentAuthor, commentTime);
-              comment.append(commentContent);
-              commentContent.append(commentText);
-            }
-          })
+              //From here fetch comments  
+          
 
       wrapperForArticles.append(articleWrapper);
       articleWrapper.append(articleContent);
@@ -163,17 +171,18 @@ fetch('https://jsonplaceholder.typicode.com/posts')
           commentsBlockWrapper.append(commentsWrapper);
               
     }
-    addEventListenersForHideComments();  
+    // addEventListenersForHideComments();  
   })
   
-      
+  
     
 // -------------------FETCH for galeries
-  const wrapperForGalleries = document.getElementsByClassName("galeries-bar-container")[0];
+  
 
 fetch('https://jsonplaceholder.typicode.com/albums')
   .then(response => response.json())
   .then(albums => {
+    let startPageArray=randomArray(10, albums.length); //IMPORTANT _ NUMBER of articles on page!
     for(let i = 0; i<startPageArray.length; i++) {
 
         let galery = document.createElement('div');

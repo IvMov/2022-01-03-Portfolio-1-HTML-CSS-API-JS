@@ -1,4 +1,4 @@
-const wrapperForGalleries = document.getElementsByClassName("galeries-bar-container")[0];
+const wrappForGalleries = document.getElementsByClassName("galeries-bar-container")[0];
 
 fetch('https://jsonplaceholder.typicode.com/albums')
   .then(response => response.json())
@@ -13,7 +13,7 @@ fetch('https://jsonplaceholder.typicode.com/albums')
 
           let galeryNameA = document.createElement('a');
               galeryNameA.classList.add("galeryName");
-              galeryNameA.setAttribute("href", "galery.html?id="+ album.id);
+              galeryNameA.setAttribute("href", "galery.html?albumId="+ album.id);
               galeryNameA.textContent = album.title;
 
           let galeryP = document.createElement('p');
@@ -31,13 +31,13 @@ fetch('https://jsonplaceholder.typicode.com/albums')
 
               let ainside = document.createElement("a");
                   ainside.classList.add("ainside");
-                  ainside.setAttribute("href", "href", "galery.html?id="+ album.id);
+                  ainside.setAttribute("href", "galery.html?albumId="+ album.id);
 
                   let ainsideImg = document.createElement("img");
                       ainsideImg.setAttribute('src', "https://picsum.photos/370/170?random="+ album.userId)
 
 
-      wrapperForGalleries.append(galery);
+      wrappForGalleries.append(galery);
           galery.append(galeryNameH4);
               galeryNameH4.append(galeryNameA);
           galery.append(galeryP);

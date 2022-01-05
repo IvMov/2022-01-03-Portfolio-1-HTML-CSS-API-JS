@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Album-2 Author - Tom Jerry</title>
+    <title>Album</title>
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,600;0,700;1,600&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
     
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--Все что связано с альбомом с этого видео https://www.youtube.com/watch?v=smOVea4_KiI -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-    <link rel="stylesheet" href="../burger-style.css">
-    <link rel="stylesheet" href="album-style.css">
+    <link rel="stylesheet" href="burger-style.css">
+    <link rel="stylesheet" href="galery-style.css">
 </head>
 <body>
     <div id="main-wrapper">
@@ -22,13 +22,13 @@
         <header>
             <div class="header-wrapper">
                 <div id="logo">
-                    <a href="../index-home.html"><img src="../images/logo.png" alt="Logo"></a>
+                    <a href="index-home.html"><img src="images/logo.png" alt="Logo"></a>
                 </div>
                 <nav id="nav">
                     <ul id="navigation-ul">
-                        <li class="navigation-li"><a class="nav-a" href="../index-home.html">Home</a></li>
-                        <li class="navigation-li"><a class="nav-a" href="../articles/index-articles.html">Articles</a></li>
-                        <li class="navigation-li"><a class="nav-a" href="../users/users.html">Authors</a></li>
+                        <li class="navigation-li"><a class="nav-a" href="index-home.html">Home</a></li>
+                        <li class="navigation-li"><a class="nav-a" href="articles.html">Articles</a></li>
+                        <li class="navigation-li"><a class="nav-a" href="users.html">Authors</a></li>
                         <li class="navigation-li"><a class="nav-a" href="galeries.html">Galleries</a></li>
                         <li class="navigation-li"><a class="nav-a" style="text-decoration: line-through; color: rgba(255, 255, 255, 0.3)" href="#">AboutMe</a></li>
                         <li class="navigation-li"><a class="nav-a" style="text-decoration: line-through; color: rgba(255, 255, 255, 0.3)" href="#">Contacts</a></li>
@@ -68,66 +68,7 @@
         </header>
 
         <main>
-            <div class="about-galery">
-                <h1><a href="../users/user-1.html">Tom Jerry</a> gallery</h1>
-            </div>
-            <div class="gallery">
-
-                <ul class="controls">
-                    <li class="buttons active" data-filter="all">all</li>
-                    <li class="buttons" data-filter="cristmas">cristmas</li>
-                    <li class="buttons" data-filter="future">future</li>
-                    <li class="buttons" data-filter="films">films</li>
-                    <li class="buttons" data-filter="fibi">my dog</li>
-                </ul>
             
-                <div class="image-container">
-            
-                    <a href="album-2/A2-cristmas-1.jpg" class="image cristmas">
-                        <img src="album-2/A2-cristmas-1.jpg" alt="">
-                    </a>
-                    <a href="album-2/A2-cristmas-2.jpg" class="image cristmas">
-                        <img src="album-2/A2-cristmas-2.jpg" alt="">
-                    </a>
-                    <a href="album-2/A2-cristmas-3.jpg" class="image cristmas">
-                        <img src="album-2/A2-cristmas-3.jpg" alt="">
-                    </a>
-                    <a href="album-2/A2-future-4.jpg" class="image future">
-                        <img src="album-2/A2-future-4.jpg" alt="">
-                    </a>
-                    <a href="album-2/A2-future-5.jpg" class="image future">
-                        <img src="album-2/A2-future-5.jpg" alt="">
-                    </a>
-                    <a href="album-2/A2-future-6.jpg" class="image future">
-                        <img src="album-2/A2-future-6.jpg" alt="">
-                    </a>
-                    <a href="album-2/A2-films-7.jpg" class="image films">
-                        <img src="album-2/A2-films-7.jpg" alt="">
-                    </a>
-                    <a href="album-2/A2-films-8.jpg" class="image films">
-                        <img src="album-2/A2-films-8.jpg" alt="">
-                    </a>
-                    <a href="album-2/A2-films-9.jpg" class="image films">
-                        <img src="album-2/A2-films-9.jpg" alt="">
-                    </a>
-            <!-- fibi in all albums -->
-                    <a href="album-1/A1-fibi-10.jpg" class="image fibi">
-                        <img src="album-1/A1-fibi-10.jpg" alt="">
-                    </a>
-            
-                    <a href="album-1/A1-fibi-11.jpg" class="image fibi">
-                        <img src="album-1/A1-fibi-11.jpg" alt="">
-                    </a>
-                    <a href="album-1/A1-fibi-12.jpg" class="image fibi">
-                        <img src="album-1/A1-fibi-12.jpg" alt="">
-                    </a>
-                    <a href="album-1/A1-fibi-13.jpg" class="image fibi">
-                        <img src="album-1/A1-fibi-13.jpg" alt="">
-                    </a>
-            
-                </div>
-            
-            </div>
 
             <div id="right-bar">
                 
@@ -138,7 +79,9 @@
     <button onclick="topFunction()" id="backToTopBtn">&#8683;</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script src="album-script.js"></script>
+    <script src="galery.js"></script>
+    <script src="script.js"></script>
+
     <script>
         $(document).ready(function(){
 

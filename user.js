@@ -150,7 +150,7 @@ fetch('https://jsonplaceholder.typicode.com/albums?userId=' + userId)
 
           let galeryNameA = document.createElement('a');
               galeryNameA.classList.add("galeryName");
-              galeryNameA.setAttribute("href", "galery.html?id="+ album.id);
+              galeryNameA.setAttribute("href", "galery.html?albumId="+ album.id);
               galeryNameA.textContent = album.title;
 
           let galeryP = document.createElement('p');
@@ -168,7 +168,7 @@ fetch('https://jsonplaceholder.typicode.com/albums?userId=' + userId)
 
               let ainside = document.createElement("a");
                   ainside.classList.add("ainside");
-                  ainside.setAttribute("href", "href", "galery.html?id="+ album.id);
+                  ainside.setAttribute("href","galery.html?albumId="+ album.id);
 
                   let ainsideImg = document.createElement("img");
                       ainsideImg.setAttribute('src', "https://picsum.photos/250/220?random="+ album.id)
