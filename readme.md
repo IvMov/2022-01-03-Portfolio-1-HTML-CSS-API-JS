@@ -1,15 +1,23 @@
-    1. Sukurti puslapį, kuriame bus atvaizduojami įrašai (posts). Kiekvienas įrašas turi:
+#front-end project for use API and create contented pages
+---
+
+- project used for practice my skills in HTML CSS JS. 
+- First try to integrate JQuery (try to understand syntax and rewrite some issues)
+- First time use API servises by Fetch
+
+---
+
+## Created undere requierements (LT) :
+
+1. Sukurti puslapį, kuriame bus atvaizduojami įrašai (posts). Kiekvienas įrašas turi:
     1.1. Pavadinimą.
     1.2. Pastraipą su įrašo (post) turiniu.
     1.3. Autorių. Tai turi būti nuoroda. Kol kas ji gali niekur nevesti.
-    2. Po kiekvienu įrašu (post) gali būti komentarų (sukurti variantus įrašui, kuris neturi komentarų, kuris turi vieną komentarą ir kuris turi daugiau nei vieną komentarą). Kiekvienas komentaras turi:
+2. Po kiekvienu įrašu (post) gali būti komentarų (sukurti variantus įrašui, kuris neturi komentarų, kuris turi vieną komentarą ir kuris turi daugiau nei vieną komentarą). Kiekvienas komentaras turi:
     2.1. Komentaro pavadinimą.
     2.2. Komentaro turinį - pastraipą.
-2.3. Komentarą parašiusio asmens el. pašto adresą.
-
-    Šiame puslapyje, kol kas, naudoti ranka įrašytus duomenis. Svarbiausias akcentas - stilius, kuris turi būti prisitaikantis prie ekrano dydžio. Inspiracijų galite semtis iš jums patinkančių puslapių.
-
-    3. Sukurti naują puslapį user.html, kuriame bus atvaizduojama vartotojo informacija:
+    2.3. Komentarą parašiusio asmens el. pašto adresą.
+3. Sukurti naują puslapį user.html, kuriame bus atvaizduojama vartotojo informacija:
     3.1. Pilnas vardas.
     3.2. Vartotojo vardas / nick'as.
     3.3. El. paštas.
@@ -17,12 +25,11 @@
     3.5. Telefono numeris.
     3.6. Internetinio puslapio adresas.
     3.7. Įmonės, kurioje dirba, pavadinimas.
-    4. Šiame puslapyje turės būti atvaizduojama:
+4. Šiame puslapyje turės būti atvaizduojama:
     4.1. Visi vartotojo parašyti įrašai (posts). Post'ų įrašuose nereikia atvaizduoti komentarų. Kiekvienas post'as turi turėti nuorodą.
     4.2. Visi vartotojo sukurti foto albumai. Kiekvienas albumas turės:
     4.2.1. Albumo pavadinimą, kuris turi būti nuoroda. Kol kas nuoroda gali niekur nevesti.
-
-    5. Pagrindiniame puslapyje pridėti skiltį, kurioje atvaizduojamas albumų sąrašas. Kiekvienas albumas turės:
+5. Pagrindiniame puslapyje pridėti skiltį, kurioje atvaizduojamas albumų sąrašas. Kiekvienas albumas turės:
     5.1. Pavadinimą, o paspaudus ant jo - nukreipiama į albumą.
     5.2. Albumo autoriaus vardą.
     5.3. Nuotrauką.
@@ -34,10 +41,9 @@
     6.3.2. https://nanogallery2.nanostudio.org/
     6.3.3. https://sachinchoolur.github.io/lightgallery.js/
     6.3.4. Arba bet kurią kitą.
-
 7. Sukurti naują puslapį post.html ir jame atvaizduoti:
-7.1. Įrašo (post) pavadinimą.
-7.2. Autoriaus vardą. Paspaudus ant autoriaus vardo, turėtų atidaryti autoriaus puslapį.
-7.3. Įrašo turinį.
-7.4. Įrašo komentarus. Komentarai turi būti atvaizduojami tokiu pačiu principu kaip ir pagrindiniame puslapyje.
-7.5. Nuoroda „Kiti autoriaus įrašai", kurią paspaudus bus nukreipiama į naują puslapį. Jame bus atvaizduojami visi šio vartotojo įrašai.
+    7.1. Įrašo (post) pavadinimą.
+    7.2. Autoriaus vardą. Paspaudus ant autoriaus vardo, turėtų atidaryti autoriaus puslapį.
+    7.3. Įrašo turinį.
+    7.4. Įrašo komentarus. Komentarai turi būti atvaizduojami tokiu pačiu principu kaip ir pagrindiniame puslapyje.
+    7.5. Nuoroda „Kiti autoriaus įrašai", kurią paspaudus bus nukreipiama į naują puslapį. Jame bus atvaizduojami visi šio vartotojo įrašai.
